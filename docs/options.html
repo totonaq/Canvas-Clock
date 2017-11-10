@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Options</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header>
+		<div class="menu-wrap">
+			<h3 class="main-title">
+				<a href="index.html">clock.js</a>
+			</h3>
+			<button class="bar"><i class="fa fa-bars" aria-hidden="true"></i></button>
+			<nav>
+				<ul id="list">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="options.html" class="active">Options</a></li>
+					<li><a href="">Download</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section class="options">
+
+		<div class="wrapper">
+		<h1 class="options-heading">List of options</h1>
+		<p class="options-par">There are number of properties you can set for any given Clock instance.</p>
+			<div class="table-wrap">
+				<table>
+					<tr>
+						<th>Property</th>
+						<th>Value</th>
+						<th>Default</th>
+						<th>Description</th>
+					</tr>
+					<!--<tr>
+						<th colspan="4">Circle properties</th>
+					</tr>-->
+					<tr>
+						<td><code>diam</code></td>
+						<td><code>number</code></td>
+						<td><code>300</code></td>
+						<td>Set diameter to the clock (minimum 100px)</td>
+					</tr>
+					<tr>
+						<td><code>bgColor</code></td>
+						<td><code>string</code></td>
+						<td><code>'#fff'</code></td>
+						<td>Set background color</td>
+					</tr>
+					<tr>
+						<td><code>borderWidth</code></td>
+						<td><code>number</code></td>
+						<td><code>3</code></td>
+						<td>Set border width, px</td>
+					</tr>
+					<tr>
+						<td><code>borderColor</code></td>
+						<td><code>string</code></td>
+						<td><code>'#000'</code></td>
+						<td>Set border color</td>
+					</tr>
+					<!--<tr>
+						<th colspan="4">Closed nut properties</th>
+					</tr>-->
+					<tr>
+						<td><code>centerDiam</code></td>
+						<td><code>number</code></td>
+						<td><code>6</code></td>
+						<td>Set diameter to the cloesd nut, px</td>
+					</tr>
+					<tr>
+						<td><code>centerColor</code></td>
+						<td><code>string</code></td>
+						<td><code>#000</code></td>
+						<td>Set color to the closed nut</td>
+					</tr>
+					<!--<tr>
+						<th colspan="4">strokes properties</th>
+					</tr>-->
+					<tr>
+						<td><code>strokes</code></td>
+						<td><code>boolean</code></td>
+						<td><code>true</code></td>
+						<td>Add or remove graduation to the clock</td>
+					</tr>
+					<tr>
+						<td><code>strokesMd</code></td>
+						<td><code>boolean</code></td>
+						<td><code>true</code></td>
+						<td>Add or remove graduation (minutes only)</td>
+					</tr>
+					<tr>
+						<td><code>strokesSm</code></td>
+						<td><code>boolean</code></td>
+						<td><code>true</code></td>
+						<td>Add or remove graduation (seconds only)</td>
+					</tr>
+					<tr>
+						<td><code>strokeLgWidth</code></td>
+						<td><code>number</code></td>
+						<td><code>3</code></td>
+						<td>Set width to the large strokes (numbers 3, 6, 9 and 12), px</td>
+					</tr>
+					<tr>
+						<td><code>strokeMdWidth</code></td>
+						<td><code>number</code></td>
+						<td><code>2</code></td>
+						<td>Set width to the medium strokes (hours), px</td>
+					</tr>
+					<tr>
+						<td><code>strokeSmWidth</code></td>
+						<td><code>number</code></td>
+						<td><code>1</code></td>
+						<td>Set width to the small strokes (seconds), px</td>
+					</tr>
+					<tr>
+						<td><code>strokeLgLength</code></td>
+						<td><code>number</code></td>
+						<td><code>20</code></td>
+						<td>Set length to the large strokes (numbers 3, 6, 9 and 12), px</td>
+					</tr>
+					<tr>
+						<td><code>strokeMdLength</code></td>
+						<td><code>number</code></td>
+						<td><code>14</code></td>
+						<td>Set length to the medium strokes (hours), px</td>
+					</tr>
+					<tr>
+						<td><code>strokeOffset</code></td>
+						<td><code>number</code></td>
+						<td><code>40</code></td>
+						<td>Set offset between strokes and clock edge, px</td>
+					</tr>
+					<tr>
+						<td><code>strokeSmLength</code></td>
+						<td><code>number</code></td>
+						<td><code>8</code></td>
+						<td>Set length to the small strokes (seconds), px</td>
+					</tr>
+					<tr>
+						<td><code>strokeColor</code></td>
+						<td><code>string</code></td>
+						<td><code>'#000'</code></td>
+						<td>Set strokes color</td>
+					</tr>
+					<!--<tr>
+						<th colspan="4">numeral properties</th>
+					</tr>-->
+					<tr>
+						<td><code>numerals</code></td>
+						<td><code>false</code> or <code>string</code></td>
+						<td><code>false</code></td>
+						<td>Add or remove numerals (possible values:<code>false</code>, <code>'roman'</code> or <code>'arabic'</code>)</td>
+					</tr>
+					<tr>
+						<td><code>numeralColor</code></td>
+						<td><code>string</code></td>
+						<td><code>#fff</code></td>
+						<td>Set color to the numerals</td>
+					</tr>
+					<tr>
+						<td><code>numeralOffset</code></td>
+						<td><code>number</code></td>
+						<td><code>20</code></td>
+						<td>Set offset between numerals center and clock edge, px</td>
+					</tr>
+					<tr>
+						<td><code>font</code></td>
+						<td><code>string</code></td>
+						<td><code>'normal 16px Arial'</code></td>
+						<td>Set font parameters to the numerals</td>
+					</tr>
+					<!--<tr>
+						<th colspan="4">arrow properties</th>
+					</tr>-->
+					<tr>
+						<td><code>arrowHWidth</code></td>
+						<td><code>number</code></td>
+						<td><code>3</code></td>
+						<td>Set width to the hour hand</td>
+					</tr>
+					<tr>
+						<td><code>arrowHLength</code></td>
+						<td><code>number</code></td>
+						<td><code>80</code></td>
+						<td>Set length to the hour hand</td>
+					</tr>
+					<tr>
+						<td><code>arrowMWidth</code></td>
+						<td><code>number</code></td>
+						<td><code>2</code></td>
+						<td>Set width to the minute hand</td>
+					</tr>
+					<tr>
+						<td><code>arrowMLength</code></td>
+						<td><code>number</code></td>
+						<td><code>100</code></td>
+						<td>Set length to the minute hand</td>
+					</tr>
+					<tr>
+						<td><code>arrowSWidth</code></td>
+						<td><code>number</code></td>
+						<td><code>1</code></td>
+						<td>Set width to the second hand</td>
+					</tr>
+					<tr>
+						<td><code>arrowSLength</code></td>
+						<td><code>number</code></td>
+						<td><code>120</code></td>
+						<td>Set length to the second hand</td>
+					</tr>
+					<tr>
+						<td><code>arrowColor</code></td>
+						<td><code>string</code></td>
+						<td><code>#000</code></td>
+						<td>Set color to the hands</td>
+					</tr>
+					<tr>
+						<td><code>enableSecArrow</code></td>
+						<td><code>boolean</code></td>
+						<td><code>true</code></td>
+						<td>Show or hide second hand</td>
+					</tr>
+					<tr>
+						<td><code>tailLength</code></td>
+						<td><code>number</code></td>
+						<td><code>15</code></td>
+						<td>Set length to the second hand tail</td>
+					</tr>
+					<!--<tr>
+						<th colspan="4">time label properties</th>
+					</tr>-->
+					<tr>
+						<td><code>timeLabel</code></td>
+						<td><code>boolean</code></td>
+						<td><code>false</code></td>
+						<td>Show or hide digital clock at the bottom</td>
+					</tr>
+					<tr>
+						<td><code>labelFont</code></td>
+						<td><code>string</code></td>
+						<td><code>'Arial'</code></td>
+						<td>Set font family to the time label</td>
+					</tr>
+					<tr>
+						<td><code>labelFontSize</code></td>
+						<td><code>number</code></td>
+						<td><code>16</code></td>
+						<td>Set font size to the time label</td>
+					</tr>
+					<tr>
+						<td><code>labelFontWeight</code></td>
+						<td><code>string</code></td>
+						<td><code>'300'</code></td>
+						<td>Set font weight to the time label</td>
+					</tr>
+					<tr>
+						<td><code>labelColor</code></td>
+						<td><code>string</code></td>
+						<td><code>'#000'</code></td>
+						<td>Set font color to the time label</td>
+					</tr>
+					<tr>
+						<td><code>showDigitSec</code></td>
+						<td><code>boolean</code></td>
+						<td><code>false</code></td>
+						<td>Show or hide digital clock seconds</td>
+					</tr>
+					<!--<tr>
+						<th colspan="4">time zone properties</th>
+					</tr>-->
+					<tr>
+						<td><code>timeZone</code></td>
+						<td><code>false</code> or <code>string</code></td>
+						<td><code>false</code></td>
+						<td>Set UTC time zone offset (min UTC-12:00, max UTC+14:00). Possible values: <code>'current'</code> (if you want to set your local time), <code>'-3:00'</code>, <code>'+5:30'</code> etc. Possible values of minutes are <code>00</code>, <code>30</code> and <code>45</code></td>
+					</tr>
+					<tr>
+						<td><code>dayLightSavingTime</code></td>
+						<td><code>false</code> or <code>string</code></td>
+						<td><code>false</code></td>
+						<td>Set region of DST (<code>false</code>, <code>'NA'</code> for North America, <code>'EU'</code> for Europe, <code>'AUS'</code> for Australia).</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+	</section>
+	<footer>
+		<h5>
+			<a href="https://iamden.xyz">iamden &copy;</a>
+		</h5>
+	</footer>
+	<script src="assets/js/common.js"></script>
+</body>
+</html>

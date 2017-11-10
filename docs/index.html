@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header>
+		<div class="menu-wrap">
+			<h3 class="main-title">
+				<a href="index.html">clock.js</a>
+			</h3>
+			<button class="bar"><i class="fa fa-bars" aria-hidden="true"></i></button>
+			<nav>
+				
+				<ul id="list">
+					
+					<li><a href="index.html" class="active">Home</a></li>
+					<li><a href="options.html">Options</a></li>
+					<li><a href="https://github.com/totonaq/Simple-Clock/archive/master.zip">Download</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section class="main">
+		<div class="info-wrap">
+			<div class="common-info">
+				<h1 class="plugin-name">Simple Clock</h1>
+				<p class="descr">
+					Fully customized clock plugin supporting time zones and DST.
+				</p>
+				<div class="buttons">
+					<a href="https://github.com/totonaq/Simple-Clock/archive/master.zip" class="download">Download</a>
+					<a href="https://github.com/totonaq/Simple-Clock" class="github">Github</a>
+				</div>
+			</div>
+			
+			<div class="images">
+				<div class="clock">
+					<img src="assets/images/clock.png" alt="">
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	
+	<section class="clocks">
+		<h1 class="clocks-heading">What time is it in different parts of the world?</h1>
+		<p class="clocks-text">Let's compare!</p>
+		<div class="clock-wrap">
+			<div class="each-clock-wrap">
+				<h2>Los Angeles</h2>
+				<div class="clock1"></div>
+			</div>
+			<div class="each-clock-wrap">
+				<h2>London</h2>
+				<div class="clock2"></div>
+			</div>
+			<div class="each-clock-wrap">
+				<h2>Moscow</h2>
+				<div class="clock3"></div>
+			</div>
+			<div class="each-clock-wrap">
+				<h2>New Delhi</h2>
+				<div class="clock4"></div>
+			</div>
+			<div class="each-clock-wrap">
+				<h2>Shanghai</h2>
+				<div class="clock5"></div>
+			</div>
+			<div class="each-clock-wrap">
+				<h2>Sydney</h2>
+				<div class="clock6"></div>
+			</div>
+		</div>
+		
+	</section>
+
+	<section class="features">
+		<div class="features-wrap">
+			<div class="feature-img">
+				<img src="assets/images/design.png" alt="">
+			</div>
+			<div class="feature-descr-wrap">
+				<h1 class="feature-descr-heading">Fully customizable</h1>
+				<p class="feature-descr-text">Over 30 options are available.</p>
+			</div>
+			
+		</div>
+		<div class="features-wrap">
+			<div class="feature-img">
+				<img src="assets/images/timezone.png" alt="">
+			</div>
+			<div class="feature-descr-wrap">
+				<h1 class="feature-descr-heading">Support any timezone</h1>
+				<p class="feature-descr-text">Even those are offset by 30 and 45 minutes.</p>
+			</div>
+			
+		</div>
+		<div class="features-wrap">
+			<div class="feature-img">
+				<img src="assets/images/summertime.png" alt="">
+			</div>
+			<div class="feature-descr-wrap">
+				<h1 class="feature-descr-heading">Support DST</h1>
+				<p class="feature-descr-text">Consider American, European and Australian features of DST.</p>
+			</div>
+			
+		</div>
+		<hr>
+	</section>
+	<section class="end">
+		<h3>
+			I've made this plugin just for fun :) But if you want to decorate your site or blog for a clock, you're welcome! And a special thanks to the author of <a href="https://owlcarousel2.github.io/OwlCarousel2/">this page</a> who inspired me to create a design for my own.
+		</h3>
+	</section>
+	<footer>
+		<h5>
+			<a href="https://iamden.xyz">iamden &copy;</a>
+		</h5>
+	</footer>
+</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="assets/js/clock.min.js"></script>
+	<script src="assets/js/common.js"></script>
+	<script>
+		setclock(".clock1", {
+			diam: 170,
+			borderWidth: 0,
+			numerals: false,
+			timeZone: '-8:00',
+
+			timeLabel: true,
+			labelFont: 'Lato',
+			labelFontSize: '25px',
+			labelFontWeight: '300',
+		
+			labelColor: '#000',
+			showDigitSec: false,
+			
+ 			
+ 			strokes: true,
+ 			strokeSm: false,
+ 			strokeOffset: 0,
+ 			strokeLengthLg: 15,
+			strokeLengthMd: 10,
+			strokeLgWidth: 3,
+			strokeMdWidth: 2,
+
+			centerDiam: 3,
+
+			arrowHLength: 50,
+			arrowMLength: 60,
+			arrowSLength: 70,
+			arrowHWidth: 3,
+			arrowMWidth: 2,
+			arrowSWidth: 1,
+			
+ 			dayLightSavingTime: 'NA',
+ 			labelSec: false,
+ 			
+		});
+		
+		setclock(".clock2", {
+			diam: 170,
+			borderWidth: 0,
+			numerals: false,
+			timeZone: '0:00',
+			timeLabel: true,
+			labelFont: 'Lato',
+			labelFontSize: '25px',
+			labelFontWeight: '300',
+			labelColor: '#000',
+			showDigitSec: false,
+			
+ 			
+ 			strokes: true,
+ 			strokeSm: false,
+ 			strokeOffset: 0,
+ 			strokeLengthLg: 15,
+			strokeLengthMd: 10,
+			strokeLgWidth: 3,
+			strokeMdWidth: 2,
+
+			centerDiam: 3,
+
+			arrowHLength: 50,
+			arrowMLength: 60,
+			arrowSLength: 70,
+			arrowHWidth: 3,
+			arrowMWidth: 2,
+			arrowSWidth: 1,
+			
+ 			dayLightSavingTime: 'EU',
+ 			labelSec: false,
+		});
+		setclock(".clock3", {
+			diam: 170,
+			borderWidth: 0,
+			numerals: false,
+			timeZone: '3:00',
+			timeLabel: true,
+			labelFont: 'Lato',
+			labelFontSize: '25px',
+			labelFontWeight: '300',
+			labelColor: '#000',
+			showDigitSec: false,
+			
+ 			
+ 			strokes: true,
+ 			strokeSm: false,
+ 			strokeOffset: 0,
+ 			strokeLengthLg: 15,
+			strokeLengthMd: 10,
+			strokeLgWidth: 3,
+			strokeMdWidth: 2,
+
+			centerDiam: 3,
+
+			arrowHLength: 50,
+			arrowMLength: 60,
+			arrowSLength: 70,
+			arrowHWidth: 3,
+			arrowMWidth: 2,
+			arrowSWidth: 1,
+			
+ 			dayLightSavingTime: false,
+ 			labelSec: false,
+		});
+		setclock(".clock4", {
+			diam: 170,
+			borderWidth: 0,
+			numerals: false,
+			timeZone: '5:30',
+			timeLabel: true,
+			labelFont: 'Lato',
+			labelFontSize: '25px',
+			labelFontWeight: '300',
+			labelColor: '#000',
+			showDigitSec: false,
+			
+ 			
+ 			strokes: true,
+ 			strokeSm: false,
+ 			strokeOffset: 0,
+ 			strokeLengthLg: 15,
+			strokeLengthMd: 10,
+			strokeLgWidth: 3,
+			strokeMdWidth: 2,
+
+			centerDiam: 3,
+
+			arrowHLength: 50,
+			arrowMLength: 60,
+			arrowSLength: 70,
+			arrowHWidth: 3,
+			arrowMWidth: 2,
+			arrowSWidth: 1,
+			
+ 			dayLightSavingTime: false,
+ 			labelSec: false,
+		});
+		setclock(".clock5", {
+			diam: 170,
+			borderWidth: 0,
+			numerals: false,
+			timeZone: '8:00',
+			timeLabel: true,
+			labelFont: 'Lato',
+			labelFontSize: '25px',
+			labelFontWeight: '300',
+			labelColor: '#000',
+			showDigitSec: false,
+			
+ 			
+ 			strokes: true,
+ 			strokeSm: false,
+ 			strokeOffset: 0,
+ 			strokeLengthLg: 15,
+			strokeLengthMd: 10,
+			strokeLgWidth: 3,
+			strokeMdWidth: 2,
+
+			centerDiam: 3,
+
+			arrowHLength: 50,
+			arrowMLength: 60,
+			arrowSLength: 70,
+			arrowHWidth: 3,
+			arrowMWidth: 2,
+			arrowSWidth: 1,
+			
+ 			dayLightSavingTime: false,
+ 			labelSec: false,
+		});
+		setclock(".clock6", {
+			diam: 170,
+			borderWidth: 0,
+			numerals: false,
+			timeZone: '+10:00',
+			timeLabel: true,
+			labelFont: 'Lato',
+			labelFontSize: '25px',
+			labelFontWeight: '300',
+			labelColor: '#000',
+			showDigitSec: false,
+			
+ 			
+ 			strokes: true,
+ 			strokeSm: false,
+ 			strokeOffset: 0,
+ 			strokeLengthLg: 15,
+			strokeLengthMd: 10,
+			strokeLgWidth: 3,
+			strokeMdWidth: 2,
+
+			centerDiam: 3,
+
+			arrowHLength: 50,
+			arrowMLength: 60,
+			arrowSLength: 70,
+			arrowHWidth: 3,
+			arrowMWidth: 2,
+			arrowSWidth: 1,
+			
+ 			dayLightSavingTime: 'AUS',
+ 			labelSec: false,
+ 			gradientEnd: 'transparent'
+		});
+	</script>
+</html>

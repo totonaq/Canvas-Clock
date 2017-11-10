@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.wrap {
+		/*border: 1px solid;*/
+		border-radius: 50%;
+		height: 200px;
+		margin: auto;
+		width: 200px;
+	}
+	canvas#time-label-2 {
+		/*width: 100%;*/
+		margin-top: 30px;
+	}
+</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="clock1">
+			
+		</div>
+		<div class="clock2" style="margin-top: 50px"></div>
+		<div class="clock3"></div>
+		<!--<canvas id='canvas' width=100 height=100></canvas>
+		<canvas id='canvas2' width=100 height=100></canvas>-->
+	</div>
+	<!--<script src="polyfill.js"></script>-->
+	<script src="src/clock.js"></script>
+	<script>
+	setclock('.clock1', {
+		diam: 400,
+		borderWidth: 0,
+
+		centerDiam: 12,
+
+		strokes: true, 
+		strokeMd: true,
+		strokeSm: true,
+		strokeWidth: 3,
+		strokeLengthLg: 20,
+		strokeLengthMd: 14,
+		strokeLengthSm: 8,
+		strokeOffset: 0,
+
+		numerals: 'roman',
+		font: 'normal 16px Arial',
+		numeralColor: '#ccc',
+		numeralOffset: 40,
+
+		arrowHLength: 120,
+		arrowMLength: 130,
+		arrowSLength: 150,
+		arrowHWidth: 7,
+		arrowMWidth: 5,
+		arrowSWidth: 3,
+		tailLength: 30,
+
+		borderColor: '#ccc',
+		centerColor: '#ccc',
+		strokeColor: '#ccc',
+		
+		arrowColor: '#ccc',
+		bgColor: 'transparent',
+		timeZone: '-12:30',
+		enableSecArrow: true,
+		timeLabel: true,
+		labelFont: 'Arial',
+		labelFontWeight: '300',
+		labelColor: 'rgba(0,0,0,.7)',
+		labelFontSize: '20px',
+		showDigitSec: true,
+		//dayLightSavingTime: 'AUS',
+	});
+	setclock('.clock2', {
+		diam: 250,
+		borderWidth: 1,
+
+		centerDiam: 8,
+
+		strokes: true, 
+		strokeMd: true,
+		strokeSm: true,
+		strokeWidth: 3,
+		strokeLengthLg: 20,
+		strokeLengthMd: 14,
+		strokeLengthSm: 8,
+		strokeOffset: 40,
+
+		numerals: 'arabic',
+		
+		
+		font: '300 16px Verdana',
+		numeralOffset: 20,
+
+		arrowHLength: 60,
+		arrowMLength: 70,
+		arrowSLength: 75,
+		arrowHWidth: 5,
+		arrowMWidth: 3,
+		arrowSWidth: 1,
+		tailLength: 20,
+		rimColor: '#fff',
+		centerColor: '#fff',
+		strokeColor: '#fff',
+		numeralColor: '#fff',
+		arrowColor: '#fff',
+		bgColor: '#000',
+		timeZone: '00:00',
+		enableSecArrow: true,
+		//dayLightSavingTime: 'AUS',
+		timeLabel: true,
+		labelFont: 'Arial',
+		labelFontSize: '20px',
+		labelFontWeight: '300',
+		labelColor: 'rgba(0,0,0,.7)',
+		
+		showDigitSec: true
+	});
+
+
+</script>
+</body>
+
+</html>
