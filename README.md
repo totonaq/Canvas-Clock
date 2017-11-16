@@ -1,11 +1,11 @@
 # Simple-Clock
-A simple clock JavaScript plugin
+A simple clock plugin written in vanilla JavaScript using canvas
 ## Why to use it
-You may add to your web page something like [this](https://totonaq.github.io/Simple-Clock/).
+You may decorate your web page with something like [this](https://totonaq.github.io/Canvas-Clock/).
 ## Install
 Put the script at the [bottom](https://developer.yahoo.com/performance/rules.html#js_bottom) of your markup.
 ```html
-<script src="[your path]/clockPlugin.js"></script>
+<script src="[your path]/clock.js"></script>
 ```
 ### Usage
 Create a container for your clock.
@@ -16,13 +16,10 @@ Call the plugin function and your clock is ready.
 ```javascript
 setclock(".myDiv", {
 	timeZone: '-8:00',
-	region: 'NA',
-	label: 'Los Angeles',
-	labelTime: true,
+	dayLightSavingTime: 'NA',
+	timeLabel: true,
 	strokes: true,
 	strokesSm: false,
-	dayLightSavingTime: true,
-	labelSec: false
+	enableSecArrow: false
 });
 
-# Canvas-Clock
