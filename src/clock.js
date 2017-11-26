@@ -19,9 +19,9 @@
 		strokeLgWidth: 3,
 		strokeMdWidth: 2,
 		strokeSmWidth: 1,
-		strokeLengthLg: 20,
-		strokeLengthMd: 14,
-		strokeLengthSm: 8,
+		strokeLgLength: 20,
+		strokeMdLength: 14,
+		strokeSmLength: 8,
 		strokeOffset: 40,
 		strokeColor: '#000',
 
@@ -188,9 +188,9 @@
 
 		drawStrokes() {
 
-			let lengthLg = options.strokeLengthLg,
-				lengthMd = options.strokeLengthMd,
-				lengthSm = options.strokeLengthSm;
+			let lengthLg = options.strokeLgLength,
+				lengthMd = options.strokeMdLength,
+				lengthSm = options.strokeSmLength;
 
 			if ( options.strokes ) {
 

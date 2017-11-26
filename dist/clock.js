@@ -23,9 +23,9 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 		strokeLgWidth: 3,
 		strokeMdWidth: 2,
 		strokeSmWidth: 1,
-		strokeLengthLg: 20,
-		strokeLengthMd: 14,
-		strokeLengthSm: 8,
+		strokeLgLength: 20,
+		strokeMdLength: 14,
+		strokeSmLength: 8,
 		strokeOffset: 40,
 		strokeColor: '#000',
 
@@ -189,9 +189,9 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 		},
 		drawStrokes: function drawStrokes() {
 
-			var lengthLg = options.strokeLengthLg,
-			    lengthMd = options.strokeLengthMd,
-			    lengthSm = options.strokeLengthSm;
+			var lengthLg = options.strokeLgLength,
+			    lengthMd = options.strokeMdLength,
+			    lengthSm = options.strokeSmLength;
 
 			if (options.strokes) {
 
