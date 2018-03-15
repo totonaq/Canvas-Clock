@@ -286,7 +286,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 		},
 		setDayLightSavingTime: function setDayLightSavingTime() {
 			var CURRENTYEAR = new Date().getUTCFullYear();
-			var NEXTYEAR = new Date().getUTCFullYear() + 1;
+
 			var now = Date.now();
 
 			var EUSPRING = getEdge(CURRENTYEAR, 25, 31, 2, 1, 0);
@@ -295,8 +295,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 			var NASPRING = getEdge(CURRENTYEAR, 8, 14, 2, 2, 0);
 			var NAAUTUMN = getEdge(CURRENTYEAR, 1, 7, 10, 2, 0);
 
-			var AUSPRING = getEdge(CURRENTYEAR, 1, 7, 9, 16, 5);
-			var AUAUTUMN = getEdge(NEXTYEAR, 1, 7, 3, 16, 5);
+			var AUSPRING = getEdge(CURRENTYEAR, 1, 7, 9, 7, 5);
+			var AUAUTUMN = getEdge(CURRENTYEAR, 1, 7, 3, 1, 5);
 
 			var dayLight = 0;
 
@@ -306,7 +306,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 			} else if (options.dayLightSavingTime === 'NA' && now >= NASPRING && now <= NAAUTUMN) {
 
 				dayLight = 1;
-			} else if (options.dayLightSavingTime === 'AUS' && now >= AUSPRING && now <= AUAUTUMN) {
+			} else if (options.dayLightSavingTime === 'AUS' && now >= AUSPRING || now <= AUAUTUMN) {
 
 				dayLight = 1;
 			} else {

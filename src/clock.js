@@ -303,7 +303,7 @@
 
 		setDayLightSavingTime() {
 			const CURRENTYEAR = new Date().getUTCFullYear();
- 			const NEXTYEAR = new Date().getUTCFullYear() + 1;
+ 			
 			const now = Date.now();
 
 			const EUSPRING = getEdge(CURRENTYEAR, 25, 31, 2, 1, 0);
@@ -312,8 +312,8 @@
 			const NASPRING = getEdge(CURRENTYEAR, 8, 14, 2, 2, 0);
 			const NAAUTUMN = getEdge(CURRENTYEAR, 1, 7, 10, 2, 0);
 
-			const AUSPRING = getEdge(CURRENTYEAR, 1, 7, 9, 16, 5);
-			const AUAUTUMN = getEdge(NEXTYEAR, 1, 7, 3, 16, 5);
+			const AUSPRING = getEdge(CURRENTYEAR, 1, 7, 9, 7, 5);
+			const AUAUTUMN = getEdge(CURRENTYEAR, 1, 7, 3, 1, 5);
 
 		 	let dayLight = 0;
 
@@ -326,7 +326,7 @@
 
 				dayLight = 1;
 
-			} else if ( options.dayLightSavingTime === 'AUS' && now >= AUSPRING && now <= AUAUTUMN ) {
+			} else if ( options.dayLightSavingTime === 'AUS' && now >= AUSPRING || now <= AUAUTUMN ) {
 
 				dayLight = 1;
 
