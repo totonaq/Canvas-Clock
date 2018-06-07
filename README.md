@@ -1,5 +1,5 @@
-# Simple-Clock
-A simple clock plugin written in vanilla JavaScript using canvas
+# Canvas-Clock
+A simple clock plugin written in vanilla JavaScript with canvas
 ## Why to use it
 You may decorate your web page with something like [this](https://totonaq.github.io/Canvas-Clock/).
 ## Install
