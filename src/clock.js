@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 
 (function() {
-	'use strict';
+	'use strict'
 
 	let defaultOpt = {
 
@@ -315,25 +315,31 @@
 			const AUSPRING = getEdge(CURRENTYEAR, 1, 7, 9, 7, 5);
 			const AUAUTUMN = getEdge(CURRENTYEAR, 1, 7, 3, 1, 5);
 
-		 	let dayLight = 0;
+			let dayLight = 0;
+			if (!options.dayLightSavingTime) {
+				dayLight = 0;
+			} else if ( options.dayLightSavingTime === 'EU' ) {
+				if (now >= EUSPRING && now <= EUAUTUMN) {
+					dayLight = 1;
+				} else {
+					dayLight = 0;
+				}
 
-			if ( options.dayLightSavingTime === 'EU' &&
-				now >= EUSPRING && now <= EUAUTUMN ) {
-				
-				dayLight = 1;
-
-			} else if ( options.dayLightSavingTime === 'NA' && now >= NASPRING && now <= NAAUTUMN ) {
-
-				dayLight = 1;
+			} else if ( options.dayLightSavingTime === 'NA' ) {
+				if (now >= NASPRING && now <= NAAUTUMN) {
+					dayLight = 1;
+				} else {
+					dayLight = 0
+				}
 
 			} else if ( options.dayLightSavingTime === 'AUS' && now >= AUSPRING || now <= AUAUTUMN ) {
-
-				dayLight = 1;
-
-			} else {
-				dayLight = 0;
+				if (now >= AUSPRING || now <= AUAUTUMN) {
+					dayLight = 1;
+				} else {
+					dayLight = 10
+				}
 			}
-		
+			
 			dst.push(dayLight);
 
 		},
